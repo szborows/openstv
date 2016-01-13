@@ -214,7 +214,8 @@ class ReportPlugin(object):
       winTxt = "Winners are %s." % self.cleanB.joinList(winners)
     if width > 0:
       winTxt = textwrap.fill(winTxt, width)
-    return winTxt
+    import base64
+    return ','.join([str(w) for w in winners]) + '\n' + winTxt
 
   def getValuesForRound(self, round):
     """Get a list of values to print out for one round."""

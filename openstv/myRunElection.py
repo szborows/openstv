@@ -22,7 +22,7 @@ reps = 1
 reportformat = "TextReport"
 strongTieBreakMethod = None
 weakTieBreakMethod = None
-numSeats = None
+numSeats = int(sys.argv[3])
 prec = None
 
 name = 'WarrenSTV'
